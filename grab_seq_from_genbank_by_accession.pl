@@ -1,5 +1,7 @@
 #!usr/bin/perl
 
+# Written by Tom de Man
+
 use strict;
 use Getopt::Long;
 use Bio::DB::GenBank;
@@ -8,8 +10,8 @@ my $in = "";
 # default file name
 my $out = "GenBank_genes.fasta";
 
-GetOptions('in=s'	=>\$in,
-		   'out=s'	=>\$out);
+GetOptions('in=s'=>\$in,
+	   'out=s'=>\$out);
 		   
 &Use unless(-e $in);
 
